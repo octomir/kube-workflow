@@ -2,6 +2,22 @@ apiVersion: v1
 entries:
   app:
   - apiVersion: v2
+    appVersion: 1.2.4
+    created: "2022-03-23T12:11:22.705669296Z"
+    description: Classic frontend app
+    digest: 81d4bb9f68a91264583e628c1cae1e179e9dd4d18a47d3ee5015faba2a32304f
+    home: https://github.com/SocialGouv
+    icon: https://avatars.githubusercontent.com/u/45039513?v=4
+    maintainers:
+    - email: dsi-incubateur@sg.social.gouv.fr
+      name: Fabrique numérique des Ministères Sociaux
+    name: app
+    sources:
+    - https://github.com/SocialGouv/actions
+    urls:
+    - https://SocialGouv.github.io/kube-workflow/app-1.2.4.tgz
+    version: 1.2.4
+  - apiVersion: v2
     appVersion: 1.2.3
     created: "2022-03-23T11:59:19.758557573Z"
     description: Classic frontend app
@@ -81,6 +97,22 @@ entries:
     - https://SocialGouv.github.io/kube-workflow/app-1.0.0.tgz
     version: 1.0.0
   hasura:
+  - apiVersion: v2
+    appVersion: 1.2.4
+    created: "2022-03-23T12:11:22.706010198Z"
+    description: Hasura service
+    digest: 431be5f4a19b42b1bf20990e8ea65bbc69da60dee0c44dc87ef345d58067e2a1
+    home: https://github.com/SocialGouv
+    icon: https://avatars.githubusercontent.com/u/45039513?v=4
+    maintainers:
+    - email: dsi-incubateur@sg.social.gouv.fr
+      name: Fabrique numérique des Ministères Sociaux
+    name: hasura
+    sources:
+    - https://github.com/SocialGouv/actions
+    urls:
+    - https://SocialGouv.github.io/kube-workflow/hasura-1.2.4.tgz
+    version: 1.2.4
   - apiVersion: v2
     appVersion: 1.2.3
     created: "2022-03-23T11:59:19.759258382Z"
@@ -162,6 +194,22 @@ entries:
     version: 1.0.0
   jobs:
   - apiVersion: v2
+    appVersion: 1.2.4
+    created: "2022-03-23T12:11:22.7062864Z"
+    description: Jobs
+    digest: a798374c154a163004d756c9b8f55ecf596b074426982ff6f1c9f0d225d9079f
+    home: https://github.com/SocialGouv
+    icon: https://avatars.githubusercontent.com/u/45039513?v=4
+    maintainers:
+    - email: dsi-incubateur@sg.social.gouv.fr
+      name: Fabrique numérique des Ministères Sociaux
+    name: jobs
+    sources:
+    - https://github.com/SocialGouv/actions
+    urls:
+    - https://SocialGouv.github.io/kube-workflow/jobs-1.2.4.tgz
+    version: 1.2.4
+  - apiVersion: v2
     appVersion: 1.2.3
     created: "2022-03-23T11:59:19.759664286Z"
     description: Jobs
@@ -241,6 +289,47 @@ entries:
     - https://SocialGouv.github.io/kube-workflow/jobs-1.0.0.tgz
     version: 1.0.0
   kube-workflow:
+  - apiVersion: v2
+    appVersion: 1.2.4
+    created: "2022-03-23T12:11:22.708717616Z"
+    dependencies:
+    - condition: app.enabled
+      name: app
+      repository: file://./charts/app
+      version: 1.2.4
+    - condition: hasura.enabled
+      name: hasura
+      repository: file://./charts/hasura
+      version: 1.2.4
+    - condition: maildev.enabled
+      name: maildev
+      repository: file://./charts/maildev
+      version: 1.2.4
+    - condition: metabase.enabled
+      name: metabase
+      repository: file://./charts/metabase
+      version: 1.2.4
+    - condition: pgweb.enabled
+      name: pgweb
+      repository: file://./charts/pgweb
+      version: 1.2.4
+    - condition: jobs.enabled
+      name: jobs
+      repository: file://./charts/jobs
+      version: 1.2.4
+    description: Helm template for Kubernetes
+    digest: 4efe2ac6a043f611d063559e192964a64a0fdbf4a906f6e1b954730495c9c984
+    home: https://github.com/SocialGouv/kube-workflow
+    icon: https://avatars.githubusercontent.com/u/45039513?v=4
+    maintainers:
+    - email: dsi-incubateur@sg.social.gouv.fr
+      name: Fabrique numérique des Ministères Sociaux
+    name: kube-workflow
+    sources:
+    - https://github.com/SocialGouv/kube-workflow
+    urls:
+    - https://SocialGouv.github.io/kube-workflow/kube-workflow-1.2.4.tgz
+    version: 1.2.4
   - apiVersion: v2
     appVersion: 1.2.3
     created: "2022-03-23T11:59:19.763115027Z"
@@ -447,6 +536,22 @@ entries:
     version: 1.0.0
   maildev:
   - apiVersion: v2
+    appVersion: 1.2.4
+    created: "2022-03-23T12:11:22.708928818Z"
+    description: Classic frontend app
+    digest: edb295117874fe564a6841edc7bd23125e340d57c9a14bfc06e1206d191a0178
+    home: https://github.com/SocialGouv
+    icon: https://avatars.githubusercontent.com/u/45039513?v=4
+    maintainers:
+    - email: dsi-incubateur@sg.social.gouv.fr
+      name: Fabrique numérique des Ministères Sociaux
+    name: maildev
+    sources:
+    - https://github.com/SocialGouv/actions
+    urls:
+    - https://SocialGouv.github.io/kube-workflow/maildev-1.2.4.tgz
+    version: 1.2.4
+  - apiVersion: v2
     appVersion: 1.2.3
     created: "2022-03-23T11:59:19.76338563Z"
     description: Classic frontend app
@@ -526,6 +631,22 @@ entries:
     - https://SocialGouv.github.io/kube-workflow/maildev-1.0.0.tgz
     version: 1.0.0
   metabase:
+  - apiVersion: v2
+    appVersion: 1.2.4
+    created: "2022-03-23T12:11:22.709176119Z"
+    description: Metabase app
+    digest: 118f2d25e4ccf37d16c430acd3aaefb79622e0da8494f207ec3be15881f3a35e
+    home: https://github.com/SocialGouv
+    icon: https://avatars.githubusercontent.com/u/45039513?v=4
+    maintainers:
+    - email: dsi-incubateur@sg.social.gouv.fr
+      name: Fabrique numérique des Ministères Sociaux
+    name: metabase
+    sources:
+    - https://github.com/SocialGouv/kube-workflow
+    urls:
+    - https://SocialGouv.github.io/kube-workflow/metabase-1.2.4.tgz
+    version: 1.2.4
   - apiVersion: v2
     appVersion: 1.2.3
     created: "2022-03-23T11:59:19.763673834Z"
@@ -607,6 +728,22 @@ entries:
     version: 1.0.0
   pgweb:
   - apiVersion: v2
+    appVersion: 1.2.4
+    created: "2022-03-23T12:11:22.709397921Z"
+    description: Pgweb
+    digest: 2f63d835bf68fa1685e7f0d3a555cee9153d8e34c34f0c08fb197c9e3ff57ac1
+    home: https://github.com/SocialGouv
+    icon: https://avatars.githubusercontent.com/u/45039513?v=4
+    maintainers:
+    - email: dsi-incubateur@sg.social.gouv.fr
+      name: Fabrique numérique des Ministères Sociaux
+    name: pgweb
+    sources:
+    - https://github.com/SocialGouv/actions
+    urls:
+    - https://SocialGouv.github.io/kube-workflow/pgweb-1.2.4.tgz
+    version: 1.2.4
+  - apiVersion: v2
     appVersion: 1.2.3
     created: "2022-03-23T11:59:19.763962137Z"
     description: Pgweb
@@ -685,4 +822,4 @@ entries:
     urls:
     - https://SocialGouv.github.io/kube-workflow/pgweb-1.0.0.tgz
     version: 1.0.0
-generated: "2022-03-23T11:59:19.757614262Z"
+generated: "2022-03-23T12:11:22.703723083Z"
